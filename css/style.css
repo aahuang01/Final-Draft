@@ -147,6 +147,9 @@ img:nth-child(3n + 3):hover {
     .rotate:hover{
         animation: none;
     }
+    .card:hover .cardinner, .card:focus .cardinner{
+        transform: none;
+    }
 }
 
 .image:hover {
