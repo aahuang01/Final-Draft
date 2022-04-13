@@ -143,15 +143,6 @@ img:nth-child(3n + 3):hover {
     }
 }
 
-@media (prefers-reduced-motion) {
-    .rotate:hover{
-        animation: none;
-    }
-    .card:hover .cardinner, .card:focus .cardinner{
-        transform: none;
-    }
-}
-
 .image:hover {
     transform: rotate(360deg);
     animation: rotate(360deg);
@@ -204,10 +195,9 @@ a.skip{
     background-color: transparent;
     width: 250px;
     height: 336px;
-    perspective: 1000px; /* Remove this if you don't want the 3D effect */
+    perspective: 1000px; 
   }
   
-  /* This container is needed to position the front and back side */
   .cardinner {
     position: relative;
     width: 100%;
@@ -252,3 +242,18 @@ a.skip{
   .cardback a:visited{
     color: aqua;
   }
+
+  @media (prefers-reduced-motion) {
+    .rotate:hover{
+        animation: none;
+    }
+
+    .cardinner{
+        transition: transform 0s;
+    }
+    
+    a.skip{
+        -webkit-transition: top 0s ease-out;
+        transition: left 0s ease-out;
+    }
+}
