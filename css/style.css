@@ -236,7 +236,16 @@ a.skip{
   
   /* Style the back side */
   .cardback {
-    background-color: gray;
+    background-color: rgb(73, 73, 73);
     color: white;
+    text-decoration: none;
     transform: rotateY(180deg);
+  }
+
+  .cardback a:link{
+    color: white;
+  }
+
+  .cardback a:visited{
+    color: aqua;
   }
