@@ -70,10 +70,6 @@ img:nth-child(3n + 3):hover {
     border-radius: 5px;
 }
 
-.nish {
-    align-self: center;
-}
-
 #start {
     grid-column: 1;
     grid-row: 1;
@@ -119,20 +115,26 @@ img:nth-child(3n + 3):hover {
 .stix {
     display: flex;
     gap: 1em;
-    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
-}
-
-#kur, #kurkur, #nis, #nisnis {
-    width: 56%;
-}
-
-
-.nish {
+    justify-content: center;
     background-color: bisque;
     border: 2px solid black;
     border-radius: 5px;
+    padding-bottom: 15px;
+    margin-bottom: 40px;
+}
+
+.nish {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.nish img {
+    flex-grow: 1;
+    min-width: 5%;
+    max-width: 200px;
 }
 
 .rotate:hover {
@@ -295,6 +297,15 @@ a.skip{
         grid-column: 1 / span 2;
         grid-row: 7 / span 1;
     }
+    .nish {
+        flex-wrap: wrap;
+        height: 600px;
+        align-items: center;
+    }
+
+    .nish img {
+        flex-grow: 0;
+    }
 }
 
 
@@ -384,6 +395,24 @@ a.skip{
     #uto3 {
         grid-column: 1 / span 3;
         grid-row: 5 / span 1;
+    }
+
+    .stix {
+        flex-wrap: nowrap;
+    }
+
+    .nish{
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+    }
+    .stix p {
+        width: 50%;
+        justify-self: end;
+    }
+
+    .stix .nish {
+        width: 600px;
     }
 }
 
